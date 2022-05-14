@@ -1,17 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import AppBar from "./components/AppBar";
+import AppBar from "./AppBar";
 
 const HomePage = lazy(() =>
-  import("./components/HomePage" /* webpackChunkName: "home-page" */)
+  import("./HomePage" /* webpackChunkName: "home-page" */)
 );
-const MoviesPage = lazy(() => import("./components/MoviesPage"));
-const MovieDetailsPage = lazy(() => import("./components/MovieDetailsPage"));
-const Cast = lazy(() => import("./components/Cast"));
-const Reviews = lazy(() => import("./components/Reviews"));
-const NotFoundView = lazy(() => import("./components/NotFoundView"));
+const MoviesPage = lazy(() => import("./MoviesPage"));
+const MovieDetailsPage = lazy(() => import("./MovieDetailsPage"));
+const Cast = lazy(() => import("./Cast"));
+const Reviews = lazy(() => import("./Reviews"));
+const NotFoundView = lazy(() => import("./NotFoundView"));
 
-export default function App() {
+export const App = () => {
   return (
     <Suspense fallback={<p>Loading...</p>}>
       <AppBar />
