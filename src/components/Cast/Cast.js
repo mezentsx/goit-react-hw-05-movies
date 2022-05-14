@@ -1,4 +1,4 @@
-import s from "./Cast.module.css";
+// import s from "./Cast.module.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchCast } from "../utility/Api";
